@@ -133,7 +133,6 @@ GameObject:
   - component: {fileID: 9178693151985480095}
   - component: {fileID: 5657472210444110307}
   - component: {fileID: 4870674850696701533}
-  - component: {fileID: 5538937839500839152}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -227,23 +226,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0.5, z: 0}
---- !u!114 &5538937839500839152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7133511258880207312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24d4cafd54d432944a365fc9d7a68ab4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CatchObjects
-  InputActions: {fileID: -944628639613478452, guid: 8d316d4920404574a813d92c914c2d7d, type: 3}
-  playerHead: {fileID: 4028301551580712950}
-  coolDown: 3
-  throwSpeed: 10
-  distance: 15
 --- !u!1001 &6389801329309941017
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -296,16 +278,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: HeadWithCamera
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2465311491173833124, guid: 89fa23d15dfbd8c4299361f8cf3fdb6e, type: 3}
+    - {fileID: 2176178994155631755, guid: 89fa23d15dfbd8c4299361f8cf3fdb6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8019297537331163887, guid: 89fa23d15dfbd8c4299361f8cf3fdb6e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6461090263468327510}
   m_SourcePrefab: {fileID: 100100000, guid: 89fa23d15dfbd8c4299361f8cf3fdb6e, type: 3}
 --- !u!1 &4028301551580712950 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8019297537331163887, guid: 89fa23d15dfbd8c4299361f8cf3fdb6e, type: 3}
   m_PrefabInstance: {fileID: 6389801329309941017}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6461090263468327510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4028301551580712950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e68d45ee9b97047acbba59646cb26c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Head
 --- !u!4 &4089951388946311379 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6948860067614873034, guid: 89fa23d15dfbd8c4299361f8cf3fdb6e, type: 3}
