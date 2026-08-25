@@ -7,7 +7,10 @@ public class Head : MonoBehaviour
     public InputActionAsset InputActions;
     private InputAction throwAction;
 
-    private bool isThrowing;
+    private bool canThrow;
+
+    private Vector3 defaultPosition;
+    private Transform defaultParent;
 
 
 
@@ -28,12 +31,20 @@ public class Head : MonoBehaviour
 
     private void Start()
     {
-        isThrowing = false;
+        canThrow = true;
+        defaultParent = transform.parent;
+        defaultPosition = transform.localPosition;
+    }
+
+    private void Update()
+    {
+        if (canThrow && throwAction.WasPressedThisFrame()) Throw();
     }
 
     private void Throw()
     {
-
+        transform.parent = null;
+        canThrow = false;
     }
 
 
