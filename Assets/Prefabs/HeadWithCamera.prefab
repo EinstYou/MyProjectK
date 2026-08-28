@@ -100,8 +100,8 @@ GameObject:
   - component: {fileID: 5957681637610398980}
   - component: {fileID: 7201674664016651496}
   - component: {fileID: 6182181018050138585}
-  - component: {fileID: 2465311491173833124}
-  - component: {fileID: 2176178994155631755}
+  - component: {fileID: 2806165664579984824}
+  - component: {fileID: 2133388038275040097}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -182,7 +182,7 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &2465311491173833124
+--- !u!54 &2806165664579984824
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -206,10 +206,10 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 2
-  m_Constraints: 112
-  m_CollisionDetection: 1
---- !u!135 &2176178994155631755
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!135 &2133388038275040097
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -226,7 +226,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
