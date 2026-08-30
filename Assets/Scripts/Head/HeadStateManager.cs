@@ -1,22 +1,52 @@
+using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class HeadStateManager : MonoBehaviour
 {
 
-    HeadBaseState currentState;
-    HeadStandState StandState = new HeadStandState();
-    HeadNormalState NormalState = new HeadNormalState();
-    HeadThrowingState ThrowingState = new HeadThrowingState();
+    
+    public HeadBlackBoard BlackBoard = new HeadBlackBoard();
 
-    void Start()
+
+    private HeadBaseState currentState;
+    public HeadStandState StandState = new HeadStandState();
+    public HeadNormalState NormalState = new HeadNormalState();
+    public HeadThrowingState ThrowingState = new HeadThrowingState();
+
+
+    private void OnEnable()
     {
-        currentState = NormalState;
-        currentState.EnterState(this);
+        BlackBoard.InputActions.FindActionMap("Player").Enable();
     }
 
-    // Update is called once per frame
+    private void OnDisable()
+    {
+        BlackBoard.InputActions.FindActionMap("Player").Disable();
+    }
+
+    private void Awake()
+    {
+        BlackBoard.throwButton = BlackBoard.InputActions.FindAction("Throw");
+    }
+
+    private void Start()
+    {
+
+        BlackBoard.rigidBody = GetComponent<Rigidbody>();
+        SwitchState(NormalState);
+    }
+
+   
     void Update()
     {
-        
+        currentState.UpdateState(this);
+    }
+
+
+    public void SwitchState(HeadBaseState state)
+    {
+        currentState = state;
+        currentState.EnterState(this);
     }
 }

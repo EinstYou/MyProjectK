@@ -1,5 +1,7 @@
 using UnityEngine;
 
+
+[System.Serializable]
 public class HeadStandState : HeadBaseState
 {
     public override void EnterState(HeadStateManager head)
@@ -8,11 +10,6 @@ public class HeadStandState : HeadBaseState
     }
 
     public override void UpdateState(HeadStateManager head)
-    {
-
-    }
-
-    public override void OnThrowPressed(HeadStateManager head)
     {
 
     }

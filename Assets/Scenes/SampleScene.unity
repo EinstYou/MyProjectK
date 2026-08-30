@@ -519,8 +519,43 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4028301551580712950, guid: f5f8289c67af55f44ab48c960d8a264e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7127140688128101727}
   m_SourcePrefab: {fileID: 100100000, guid: f5f8289c67af55f44ab48c960d8a264e, type: 3}
+--- !u!1 &7127140688128101726 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4028301551580712950, guid: f5f8289c67af55f44ab48c960d8a264e, type: 3}
+  m_PrefabInstance: {fileID: 7127140688128101725}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7127140688128101727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7127140688128101726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e830639a0fb0eea40b9105a374857bc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HeadStateManager
+  throwForce: 0
+  InputActions: {fileID: -944628639613478452, guid: 8d316d4920404574a813d92c914c2d7d, type: 3}
+  throwButton:
+    m_Name: Throw Button
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d2c122e5-d4cf-4221-8b0c-1b6897337884
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+    m_Priority: 0
+  rigidBody: {fileID: 0}
+  collider: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
