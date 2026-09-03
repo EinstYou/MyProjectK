@@ -32,8 +32,15 @@ public class HeadStateManager : MonoBehaviour
 
     private void Start()
     {
-
         BlackBoard.rigidBody = GetComponent<Rigidbody>();
+        BlackBoard.animator = GetComponent<Animator>();
+        BlackBoard.collider = GetComponent<SphereCollider>();
+
+        BlackBoard.defaultParent = transform.parent;
+        BlackBoard.defaultPosition = transform.localPosition;
+
+        if (BlackBoard.direction == null) BlackBoard.direction = transform;
+
         SwitchState(NormalState);
     }
 

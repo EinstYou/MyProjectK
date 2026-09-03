@@ -168,6 +168,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1157466457 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3872368645072964881, guid: f5f8289c67af55f44ab48c960d8a264e, type: 3}
+  m_PrefabInstance: {fileID: 7127140688128101725}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1704161649
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,6 +477,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4987300537799409272, guid: f5f8289c67af55f44ab48c960d8a264e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7133511258880207312, guid: f5f8289c67af55f44ab48c960d8a264e, type: 3}
       propertyPath: m_Name
       value: Player
@@ -516,6 +525,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9105331465056837793, guid: f5f8289c67af55f44ab48c960d8a264e, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 9105331465056837793, guid: f5f8289c67af55f44ab48c960d8a264e, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9105331465056837793, guid: f5f8289c67af55f44ab48c960d8a264e, type: 3}
+      propertyPath: m_LinearDamping
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -541,21 +562,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e830639a0fb0eea40b9105a374857bc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HeadStateManager
-  throwForce: 0
-  InputActions: {fileID: -944628639613478452, guid: 8d316d4920404574a813d92c914c2d7d, type: 3}
-  throwButton:
-    m_Name: Throw Button
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: d2c122e5-d4cf-4221-8b0c-1b6897337884
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-    m_Priority: 0
-  rigidBody: {fileID: 0}
-  collider: {fileID: 0}
-  animator: {fileID: 0}
+  BlackBoard:
+    throwForce: 50
+    InputActions: {fileID: -944628639613478452, guid: 8d316d4920404574a813d92c914c2d7d, type: 3}
+    direction: {fileID: 1157466457}
+    throwButton:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: a903e355-50a0-43d6-bd9b-1cca77d3b010
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    rigidBody: {fileID: 0}
+    collider: {fileID: 0}
+    animator: {fileID: 0}
+    defaultParent: {fileID: 0}
+    defaultPosition: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
