@@ -7,6 +7,7 @@ public class HeadBlackBoard
     public float throwForce;
     public InputActionAsset InputActions;
     public Transform direction;
+    public float headDuration;
 
     [HideInInspector] public InputAction throwButton;
     [HideInInspector] public Rigidbody rigidBody;
